@@ -194,11 +194,9 @@ const themeSettings = mode => {
 };
 
 // ColorModeContext is a context object
-const ColorModeContext = createContext({
-	toggleColorMode: () => {}
-});
+const ColorModeContext = createContext();
 
-// useMode is a function that has the mode variable, a memoized theme function that creates an MUI theme based on the mode, and a memoized colorMode function that changes the value of mode.
+// useMode is a function that has the mode variable, a memoized createTheme function that creates an MUI theme based on the mode, and a memoized toggleColorMode function that changes the value of mode.
 const useMode = () => {
 	const [mode, setMode] = useState('dark');
 
@@ -215,4 +213,4 @@ const useMode = () => {
 	return [theme, colorMode];
 };
 
-export {ColorModeContext, useMode};
+export {tokens, ColorModeContext, useMode};
