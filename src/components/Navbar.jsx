@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import {useContext} from 'react';
 
 import {useTheme, Box, IconButton, InputBase} from '@mui/material';
