@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import {useTheme, Box} from '@mui/material';
 import {DataGrid, GridToolbar} from '@mui/x-data-grid';
 
@@ -11,16 +10,32 @@ function Orders() {
 	const theme = useTheme();
 	const colors = tokens(theme.palette.mode);
 
-	// todo Include products
 	const columns = [
 		{field: 'id', headerName: 'ID', cellClassName: 'green-column'},
 		{field: 'name', headerName: 'Name', flex: 1},
-		// {field: 'products', headerName: 'Products', flex: 1},
-		{field: 'address', headerName: 'Address', flex: 2, cellClassName: 'green-column'},
+		{
+			field: 'products',
+			headerName: 'Products',
+			flex: 1,
+			cellClassName: 'green-column',
+			renderCell: ({row: {products}}) => {
+				return (
+					<div>
+						{products.map(({id, name, price, size, color, quantity}) => (
+							<div key={id}>
+								{quantity} {size} {color} {name} ${price.toFixed(2)}
+							</div>
+						))}
+					</div>
+				);
+			}
+		},
+		{field: 'address', headerName: 'Address', flex: 2},
 		{
 			field: 'totalPrice',
-			headerName: 'Price',
+			headerName: 'Total Price',
 			flex: 1,
+			cellClassName: 'green-column',
 			renderCell: ({row: {totalPrice}}) => {
 				return <div>${totalPrice.toFixed(2)}</div>;
 			}
@@ -46,6 +61,9 @@ function Orders() {
 					},
 					'& .green-column': {
 						color: colors.greenAccent[300]
+					},
+					'& .MuiCheckbox-root.Mui-checked': {
+						color: colors.grey[100]
 					},
 					'& .MuiDataGrid-cell': {
 						borderBottom: 'none'

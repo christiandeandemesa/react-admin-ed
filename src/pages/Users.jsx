@@ -74,6 +74,10 @@ function Users() {
 					'& .green-column': {
 						color: colors.greenAccent[300]
 					},
+					// Checkbox color.
+					'& .MuiCheckbox-root.Mui-checked': {
+						color: colors.grey[100]
+					},
 					// Removes the bottom border of each row.
 					'& .MuiDataGrid-cell': {
 						borderBottom: 'none'

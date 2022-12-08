@@ -70,6 +70,9 @@ function Products() {
 					'& .green-column': {
 						color: colors.greenAccent[300]
 					},
+					'& .MuiCheckbox-root.Mui-checked': {
+						color: colors.grey[100]
+					},
 					'& .MuiDataGrid-cell': {
 						borderBottom: 'none'
 					},
