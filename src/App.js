@@ -6,9 +6,9 @@ import {CssBaseline, ThemeProvider} from '@mui/material';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
-import Team from './pages/Team';
-import Contacts from './pages/Contacts';
-import Invoices from './pages/Invoices';
+import Users from './pages/Users';
+import Products from './pages/Products';
+import Orders from './pages/Orders';
 import Form from './pages/Form';
 import Calendar from './pages/Calendar';
 import FAQ from './pages/FAQ';
@@ -35,9 +35,9 @@ function App() {
 						<Navbar />
 						<Routes>
 							<Route path='/' element={<Dashboard />} />
-							<Route path='/team' element={<Team />} />
-							<Route path='/contacts' element={<Contacts />} />
-							<Route path='/invoices' element={<Invoices />} />
+							<Route path='/users' element={<Users />} />
+							<Route path='/products' element={<Products />} />
+							<Route path='/orders' element={<Orders />} />
 							<Route path='/form' element={<Form />} />
 							<Route path='/calendar' element={<Calendar />} />
 							<Route path='/faq' element={<FAQ />} />

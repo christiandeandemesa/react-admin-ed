@@ -1,268 +1,195 @@
 import {tokens} from '../theme';
 
-export const mockDataTeam = [
+// Fake user documents from MongoDB
+export const mockDataUsers = [
 	{
 		id: 1,
-		name: 'Jon Snow',
-		email: 'jonsnow@gmail.com',
-		age: 35,
-		phone: '(665)121-5454',
-		access: 'admin'
+		firstName: 'Christian',
+		lastName: 'Demesa',
+		email: 'cd@gmail.com',
+		isAdmin: true
 	},
 	{
 		id: 2,
-		name: 'Cersei Lannister',
-		email: 'cerseilannister@gmail.com',
-		age: 42,
-		phone: '(421)314-2288',
-		access: 'manager'
+		firstName: 'Bianca',
+		lastName: 'Vazquez',
+		email: 'bv@gmail.com',
+		isAdmin: true
 	},
 	{
 		id: 3,
-		name: 'Jaime Lannister',
-		email: 'jaimelannister@gmail.com',
-		age: 45,
-		phone: '(422)982-6739',
-		access: 'user'
+		firstName: 'James',
+		lastName: 'Vazquez',
+		email: 'jv@gmail.com',
+		isAdmin: false
 	},
 	{
 		id: 4,
-		name: 'Anya Stark',
-		email: 'anyastark@gmail.com',
-		age: 16,
-		phone: '(921)425-6742',
-		access: 'admin'
+		firstName: 'Mateo',
+		lastName: 'Vazquez',
+		email: 'mv@gmail.com',
+		isAdmin: false
 	},
 	{
 		id: 5,
-		name: 'Daenerys Targaryen',
-		email: 'daenerystargaryen@gmail.com',
-		age: 31,
-		phone: '(421)445-1189',
-		access: 'user'
+		firstName: 'Markus',
+		lastName: 'Messiah',
+		email: 'mm@gmail.com',
+		isAdmin: true
 	},
 	{
 		id: 6,
-		name: 'Ever Melisandre',
-		email: 'evermelisandre@gmail.com',
-		age: 150,
-		phone: '(232)545-6483',
-		access: 'manager'
-	},
-	{
-		id: 7,
-		name: 'Ferrara Clifford',
-		email: 'ferraraclifford@gmail.com',
-		age: 44,
-		phone: '(543)124-0123',
-		access: 'user'
-	},
-	{
-		id: 8,
-		name: 'Rossini Frances',
-		email: 'rossinifrances@gmail.com',
-		age: 36,
-		phone: '(222)444-5555',
-		access: 'user'
-	},
-	{
-		id: 9,
-		name: 'Harvey Roxie',
-		email: 'harveyroxie@gmail.com',
-		age: 65,
-		phone: '(444)555-6239',
-		access: 'admin'
+		firstName: 'CJ',
+		lastName: 'Miller',
+		email: 'cm@gmail.com',
+		isAdmin: false
 	}
 ];
 
-export const mockDataContacts = [
+// Fake product documents from MongoDB
+export const mockDataProducts = [
 	{
 		id: 1,
-		name: 'Jon Snow',
-		email: 'jonsnow@gmail.com',
-		age: 35,
-		phone: '(665)121-5454',
-		address: '0912 Won Street, Alabama, SY 10001',
-		city: 'New York',
-		zipCode: '10001',
-		registrarId: 123512
+		name: 'Ankle Socks',
+		price: 12.99,
+		category: ['men', 'women', 'children', 'clothing'],
+		size: ['XS', 'S', 'M', 'L'],
+		color: ['Black', 'White', 'Gray'],
+		countInStock: 500
 	},
 	{
 		id: 2,
-		name: 'Cersei Lannister',
-		email: 'cerseilannister@gmail.com',
-		age: 42,
-		phone: '(421)314-2288',
-		address: '1234 Main Street, New York, NY 10001',
-		city: 'New York',
-		zipCode: '13151',
-		registrarId: 123512
+		name: 'Blouse',
+		price: 21.99,
+		category: ['women', 'clothing'],
+		size: ['S', 'M'],
+		color: ['Black', 'White', 'Blue', 'Orange'],
+		countInStock: 245
 	},
 	{
 		id: 3,
-		name: 'Jaime Lannister',
-		email: 'jaimelannister@gmail.com',
-		age: 45,
-		phone: '(422)982-6739',
-		address: '3333 Want Blvd, Estanza, NAY 42125',
-		city: 'New York',
-		zipCode: '87281',
-		registrarId: 4132513
+		name: 'Cardigan',
+		price: 49.95,
+		category: ['women', 'clothing'],
+		size: ['XS', 'S', 'M', 'L'],
+		color: ['Brown', 'Green'],
+		countInStock: 39
 	},
 	{
 		id: 4,
-		name: 'Anya Stark',
-		email: 'anyastark@gmail.com',
-		age: 16,
-		phone: '(921)425-6742',
-		address: '1514 Main Street, New York, NY 22298',
-		city: 'New York',
-		zipCode: '15551',
-		registrarId: 123512
+		name: 'Down Jacket',
+		price: 39.99,
+		category: ['men', 'women', 'children', 'clothing'],
+		size: ['XS', 'S', 'M', 'L'],
+		color: ['Brown', 'Green'],
+		countInStock: 268
 	},
 	{
 		id: 5,
-		name: 'Daenerys Targaryen',
-		email: 'daenerystargaryen@gmail.com',
-		age: 31,
-		phone: '(421)445-1189',
-		address: '11122 Welping Ave, Tenting, CD 21321',
-		city: 'Tenting',
-		zipCode: '14215',
-		registrarId: 123512
+		name: 'Headband',
+		price: 0.99,
+		category: ['women', 'children', 'clothing'],
+		size: ['XS', 'S', 'M'],
+		color: ['Yellow', 'White', 'Gray', 'Brown', 'Orange', 'Blue'],
+		countInStock: 862
 	},
 	{
 		id: 6,
-		name: 'Ever Melisandre',
-		email: 'evermelisandre@gmail.com',
-		age: 150,
-		phone: '(232)545-6483',
-		address: '1234 Canvile Street, Esvazark, NY 10001',
-		city: 'Esvazark',
-		zipCode: '10001',
-		registrarId: 123512
+		name: 'Leather Jacket',
+		price: 52.99,
+		category: ['men', 'women', 'children', 'accesories'],
+		size: ['S', 'M', 'L'],
+		color: ['Black'],
+		countInStock: 553
 	},
 	{
 		id: 7,
-		name: 'Ferrara Clifford',
-		email: 'ferraraclifford@gmail.com',
-		age: 44,
-		phone: '(543)124-0123',
-		address: '22215 Super Street, Everting, ZO 515234',
-		city: 'Evertin',
-		zipCode: '51523',
-		registrarId: 123512
+		name: "Men's Belt",
+		price: 16.99,
+		category: ['men', 'accesories'],
+		size: ['M', 'L'],
+		color: ['Brown', 'Black'],
+		countInStock: 127
 	},
 	{
 		id: 8,
-		name: 'Rossini Frances',
-		email: 'rossinifrances@gmail.com',
-		age: 36,
-		phone: '(222)444-5555',
-		address: '4123 Ever Blvd, Wentington, AD 142213',
-		city: 'Esteras',
-		zipCode: '44215',
-		registrarId: 512315
+		name: 'Rancher Cap',
+		price: 59.99,
+		category: ['men', 'women', 'children', 'accesories'],
+		size: ['S', 'M', 'L', 'XL'],
+		color: ['Red', 'Gray', 'Black', 'Orange', 'Brown', 'Green'],
+		countInStock: 539
 	},
 	{
 		id: 9,
-		name: 'Harvey Roxie',
-		email: 'harveyroxie@gmail.com',
-		age: 65,
-		phone: '(444)555-6239',
-		address: '51234 Avery Street, Cantory, ND 212412',
-		city: 'Colunza',
-		zipCode: '111234',
-		registrarId: 928397
+		name: 'Scarf',
+		price: 49.95,
+		category: ['men', 'women', 'children', 'accesories'],
+		size: ['XS', 'S', 'M', 'L', 'XL'],
+		color: ['Red'],
+		countInStock: 289
 	},
 	{
 		id: 10,
-		name: 'Enteri Redack',
-		email: 'enteriredack@gmail.com',
-		age: 42,
-		phone: '(222)444-5555',
-		address: '4123 Easer Blvd, Wentington, AD 142213',
-		city: 'Esteras',
-		zipCode: '44215',
-		registrarId: 533215
+		name: 'Tennis Shoes',
+		price: 34.26,
+		category: ['men', 'women', 'children', 'accesories'],
+		size: ['XS', 'S', 'M', 'L', 'XL'],
+		color: ['Purple', 'White', 'Pink', 'Black', 'Gray', 'Blue'],
+		countInStock: 123
 	},
 	{
 		id: 11,
-		name: 'Steve Goodman',
-		email: 'stevegoodmane@gmail.com',
-		age: 11,
-		phone: '(444)555-6239',
-		address: '51234 Fiveton Street, CunFory, ND 212412',
-		city: 'Colunza',
-		zipCode: '1234',
-		registrarId: 92197
+		name: "Women's Cargo Pants",
+		price: 36.99,
+		category: ['women', 'children', 'clothing'],
+		size: ['XS', 'S'],
+		color: ['Brown', 'White', 'Black', 'Pink', 'Green'],
+		countInStock: 729
 	}
 ];
 
-export const mockDataInvoices = [
+// Fake order documents from MongoDB
+export const mockDataOrders = [
 	{
 		id: 1,
-		name: 'Jon Snow',
-		email: 'jonsnow@gmail.com',
-		cost: '21.24',
-		phone: '(665)121-5454',
-		date: '03/12/2022'
+		name: 'Simonette Reyes',
+		products: [
+			{
+				id: 12,
+				name: 'Christmas Sweater',
+				price: 25.99,
+				size: ['L'],
+				color: ['Red'],
+				quantity: 1
+			}
+		],
+		address: '123 Imaginary Lane, Los Angeles, CA 90001',
+		totalPrice: 25.99
 	},
 	{
 		id: 2,
-		name: 'Cersei Lannister',
-		email: 'cerseilannister@gmail.com',
-		cost: '1.24',
-		phone: '(421)314-2288',
-		date: '06/15/2021'
-	},
-	{
-		id: 3,
-		name: 'Jaime Lannister',
-		email: 'jaimelannister@gmail.com',
-		cost: '11.24',
-		phone: '(422)982-6739',
-		date: '05/02/2022'
-	},
-	{
-		id: 4,
-		name: 'Anya Stark',
-		email: 'anyastark@gmail.com',
-		cost: '80.55',
-		phone: '(921)425-6742',
-		date: '03/21/2022'
-	},
-	{
-		id: 5,
-		name: 'Daenerys Targaryen',
-		email: 'daenerystargaryen@gmail.com',
-		cost: '1.24',
-		phone: '(421)445-1189',
-		date: '01/12/2021'
-	},
-	{
-		id: 6,
-		name: 'Ever Melisandre',
-		email: 'evermelisandre@gmail.com',
-		cost: '63.12',
-		phone: '(232)545-6483',
-		date: '11/02/2022'
-	},
-	{
-		id: 7,
-		name: 'Ferrara Clifford',
-		email: 'ferraraclifford@gmail.com',
-		cost: '52.42',
-		phone: '(543)124-0123',
-		date: '02/11/2022'
-	},
-	{
-		id: 8,
-		name: 'Rossini Frances',
-		email: 'rossinifrances@gmail.com',
-		cost: '21.24',
-		phone: '(222)444-5555',
-		date: '05/02/2021'
+		name: 'Albert Singleterry',
+		products: [
+			{
+				id: 12,
+				name: 'Christmas Sweater',
+				price: 25.99,
+				size: ['L'],
+				color: ['Red'],
+				quantity: 1
+			},
+			{
+				id: 13,
+				name: 'Wool Cap',
+				price: 22.9,
+				size: ['L'],
+				color: ['White'],
+				quantity: 7
+			}
+		],
+		address: '123 Imaginary Lane, Los Angeles, CA 90001',
+		totalPrice: 186.29
 	}
 ];
 

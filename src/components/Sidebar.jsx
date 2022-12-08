@@ -8,7 +8,7 @@ import {
 	Home,
 	Folder,
 	PeopleOutlined,
-	ContactsOutlined,
+	ShoppingCartOutlined,
 	ReceiptOutlined,
 	Bookmark,
 	PersonOutlined,
@@ -104,66 +104,66 @@ function Sidebar() {
 
 				{/* Data */}
 				<SubMenu icon={<Folder />} label='Data'>
-					{selected === 'Team' ? (
+					{selected === 'Users' ? (
 						<MenuItem
 							active
-							onClick={() => setSelected('Team')}
-							routerLink={<Link to='/team' />}
+							onClick={() => setSelected('Users')}
+							routerLink={<Link to='/users' />}
 							icon={<PeopleOutlined />}
 						>
 							{' '}
-							Manage Team{' '}
+							Users{' '}
 						</MenuItem>
 					) : (
 						<MenuItem
-							onClick={() => setSelected('Team')}
-							routerLink={<Link to='/team' />}
+							onClick={() => setSelected('Users')}
+							routerLink={<Link to='/users' />}
 							icon={<PeopleOutlined />}
 						>
 							{' '}
-							Manage Team{' '}
+							Users{' '}
 						</MenuItem>
 					)}
 
-					{selected === 'Contacts' ? (
+					{selected === 'Products' ? (
 						<MenuItem
 							active
-							onClick={() => setSelected('Contacts')}
-							routerLink={<Link to='/contacts' />}
-							icon={<ContactsOutlined />}
+							onClick={() => setSelected('Products')}
+							routerLink={<Link to='/products' />}
+							icon={<ShoppingCartOutlined />}
 						>
 							{' '}
-							Contact Information{' '}
+							Products{' '}
 						</MenuItem>
 					) : (
 						<MenuItem
-							onClick={() => setSelected('Contacts')}
-							routerLink={<Link to='/contacts' />}
-							icon={<ContactsOutlined />}
+							onClick={() => setSelected('Products')}
+							routerLink={<Link to='/products' />}
+							icon={<ShoppingCartOutlined />}
 						>
 							{' '}
-							Contact Information{' '}
+							Products{' '}
 						</MenuItem>
 					)}
 
-					{selected === 'Invoices' ? (
+					{selected === 'Orders' ? (
 						<MenuItem
 							active
-							onClick={() => setSelected('Invoices')}
-							routerLink={<Link to='/invoices' />}
+							onClick={() => setSelected('Orders')}
+							routerLink={<Link to='/orders' />}
 							icon={<ReceiptOutlined />}
 						>
 							{' '}
-							Invoices{' '}
+							Orders{' '}
 						</MenuItem>
 					) : (
 						<MenuItem
-							onClick={() => setSelected('Invoices')}
-							routerLink={<Link to='/invoices' />}
+							onClick={() => setSelected('Orders')}
+							routerLink={<Link to='/orders' />}
 							icon={<ReceiptOutlined />}
 						>
 							{' '}
-							Invoices{' '}
+							Orders{' '}
 						</MenuItem>
 					)}
 				</SubMenu>
@@ -301,7 +301,7 @@ function Sidebar() {
 						<MenuItem
 							active
 							onClick={() => setSelected('Geo')}
-							routerLink={<Link to='/geo' />}
+							routerLink={<Link to='/geography' />}
 							icon={<MapOutlined />}
 						>
 							{' '}
@@ -310,7 +310,7 @@ function Sidebar() {
 					) : (
 						<MenuItem
 							onClick={() => setSelected('Geo')}
-							routerLink={<Link to='/geo' />}
+							routerLink={<Link to='/geography' />}
 							icon={<MapOutlined />}
 						>
 							{' '}
