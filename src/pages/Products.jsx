@@ -1,5 +1,5 @@
 import {useTheme, Box} from '@mui/material';
-import {DataGrid} from '@mui/x-data-grid';
+import {DataGrid, GridToolbar} from '@mui/x-data-grid';
 
 import Header from '../components/Header';
 
@@ -11,12 +11,13 @@ function Products() {
 	const colors = tokens(theme.palette.mode);
 
 	const columns = [
-		{field: 'id', headerName: 'ID'},
+		{field: 'id', headerName: 'ID', cellClassName: 'green-column'},
 		{field: 'name', headerName: 'Name', flex: 2},
 		{
 			field: 'price',
 			headerName: 'Price',
 			flex: 1,
+			cellClassName: 'green-column',
 			renderCell: ({row: {price}}) => {
 				return <div>${price.toFixed(2)}</div>;
 			}
@@ -33,6 +34,7 @@ function Products() {
 			field: 'size',
 			headerName: 'Sizes',
 			flex: 1,
+			cellClassName: 'green-column',
 			renderCell: ({row: {size}}) => {
 				return <div>{size.join(', ')}</div>;
 			}
@@ -45,7 +47,7 @@ function Products() {
 				return <div>{color.join(', ')}</div>;
 			}
 		},
-		{field: 'countInStock', headerName: 'Stock Amount', flex: 1}
+		{field: 'countInStock', headerName: 'Stock Amount', flex: 1, cellClassName: 'green-column'}
 	];
 
 	return (
@@ -58,11 +60,17 @@ function Products() {
 					height: '75vh',
 					m: '40px 0 0 0',
 					'& .MuiDataGrid-root': {border: 'none'},
-					'& .MuiDataGrid-cell': {
-						borderBottom: 'none'
+					'& .MuiButtonBase-root': {
+						color: colors.grey[100]
 					},
 					'& .MuiDataGrid-columnHeaders': {
 						backgroundColor: colors.blueAccent[700],
+						borderBottom: 'none'
+					},
+					'& .green-column': {
+						color: colors.greenAccent[300]
+					},
+					'& .MuiDataGrid-cell': {
 						borderBottom: 'none'
 					},
 					'& .MuiDataGrid-virtualScroller': {
@@ -74,7 +82,12 @@ function Products() {
 					}
 				}}
 			>
-				<DataGrid rows={mockDataProducts} columns={columns} />
+				<DataGrid
+					rows={mockDataProducts}
+					columns={columns}
+					components={{Toolbar: GridToolbar}}
+					checkboxSelection
+				/>
 			</Box>
 		</Box>
 	);

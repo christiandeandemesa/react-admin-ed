@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import {useTheme, Box} from '@mui/material';
-import {DataGrid} from '@mui/x-data-grid';
+import {DataGrid, GridToolbar} from '@mui/x-data-grid';
 
 import Header from '../components/Header';
 
@@ -13,10 +13,10 @@ function Orders() {
 
 	// todo Include products
 	const columns = [
-		{field: 'id', headerName: 'ID'},
+		{field: 'id', headerName: 'ID', cellClassName: 'green-column'},
 		{field: 'name', headerName: 'Name', flex: 1},
 		// {field: 'products', headerName: 'Products', flex: 1},
-		{field: 'address', headerName: 'Address', flex: 2},
+		{field: 'address', headerName: 'Address', flex: 2, cellClassName: 'green-column'},
 		{
 			field: 'totalPrice',
 			headerName: 'Price',
@@ -37,11 +37,17 @@ function Orders() {
 					height: '75vh',
 					m: '40px 0 0 0',
 					'& .MuiDataGrid-root': {border: 'none'},
-					'& .MuiDataGrid-cell': {
-						borderBottom: 'none'
+					'& .MuiButtonBase-root': {
+						color: colors.grey[100]
 					},
 					'& .MuiDataGrid-columnHeaders': {
 						backgroundColor: colors.blueAccent[700],
+						borderBottom: 'none'
+					},
+					'& .green-column': {
+						color: colors.greenAccent[300]
+					},
+					'& .MuiDataGrid-cell': {
 						borderBottom: 'none'
 					},
 					'& .MuiDataGrid-virtualScroller': {
@@ -53,7 +59,12 @@ function Orders() {
 					}
 				}}
 			>
-				<DataGrid rows={mockDataOrders} columns={columns} />
+				<DataGrid
+					rows={mockDataOrders}
+					columns={columns}
+					components={{Toolbar: GridToolbar}}
+					checkboxSelection
+				/>
 			</Box>
 		</Box>
 	);
