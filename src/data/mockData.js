@@ -193,134 +193,85 @@ export const mockDataOrders = [
 	}
 ];
 
-export const mockTransactions = [
-	{
-		txId: '01e4dsa',
-		user: 'johndoe',
-		date: '2021-09-01',
-		cost: '43.95'
-	},
-	{
-		txId: '0315dsaa',
-		user: 'jackdower',
-		date: '2022-04-01',
-		cost: '133.45'
-	},
-	{
-		txId: '01e4dsa',
-		user: 'aberdohnny',
-		date: '2021-09-01',
-		cost: '43.95'
-	},
-	{
-		txId: '51034szv',
-		user: 'goodmanave',
-		date: '2022-11-05',
-		cost: '200.95'
-	},
-	{
-		txId: '0a123sb',
-		user: 'stevebower',
-		date: '2022-11-02',
-		cost: '13.55'
-	},
-	{
-		txId: '01e4dsa',
-		user: 'aberdohnny',
-		date: '2021-09-01',
-		cost: '43.95'
-	},
-	{
-		txId: '120s51a',
-		user: 'wootzifer',
-		date: '2019-04-15',
-		cost: '24.20'
-	},
-	{
-		txId: '0315dsaa',
-		user: 'jackdower',
-		date: '2022-04-01',
-		cost: '133.45'
-	}
-];
-
+// Fake products' bar data
+// CA FL IL NY PA TX
 export const mockBarData = [
 	{
-		country: 'AD',
-		'hot dog': 137,
-		'hot dogColor': 'hsl(229, 70%, 50%)',
-		burger: 96,
-		burgerColor: 'hsl(296, 70%, 50%)',
-		kebab: 72,
-		kebabColor: 'hsl(97, 70%, 50%)',
-		donut: 140,
-		donutColor: 'hsl(340, 70%, 50%)'
+		state: 'CA',
+		shirt: 137,
+		shirtColor: 'hsl(229, 70%, 50%)',
+		pants: 96,
+		pantsColor: 'hsl(296, 70%, 50%)',
+		dress: 72,
+		dressColor: 'hsl(97, 70%, 50%)',
+		shoes: 140,
+		shoesColor: 'hsl(340, 70%, 50%)'
 	},
 	{
-		country: 'AE',
-		'hot dog': 55,
-		'hot dogColor': 'hsl(307, 70%, 50%)',
-		burger: 28,
-		burgerColor: 'hsl(111, 70%, 50%)',
-		kebab: 58,
-		kebabColor: 'hsl(273, 70%, 50%)',
-		donut: 29,
-		donutColor: 'hsl(275, 70%, 50%)'
+		state: 'FL',
+		shirt: 55,
+		shirtColor: 'hsl(307, 70%, 50%)',
+		pants: 28,
+		pantsColor: 'hsl(111, 70%, 50%)',
+		dress: 58,
+		dressColor: 'hsl(273, 70%, 50%)',
+		shoes: 29,
+		shoesColor: 'hsl(275, 70%, 50%)'
 	},
 	{
-		country: 'AF',
-		'hot dog': 109,
-		'hot dogColor': 'hsl(72, 70%, 50%)',
-		burger: 23,
-		burgerColor: 'hsl(96, 70%, 50%)',
-		kebab: 34,
-		kebabColor: 'hsl(106, 70%, 50%)',
-		donut: 152,
-		donutColor: 'hsl(256, 70%, 50%)'
+		state: 'IL',
+		shirt: 109,
+		shirtColor: 'hsl(72, 70%, 50%)',
+		pants: 23,
+		pantsColor: 'hsl(96, 70%, 50%)',
+		dress: 34,
+		dressColor: 'hsl(106, 70%, 50%)',
+		shoes: 152,
+		shoesColor: 'hsl(256, 70%, 50%)'
 	},
 	{
-		country: 'AG',
-		'hot dog': 133,
-		'hot dogColor': 'hsl(257, 70%, 50%)',
-		burger: 52,
-		burgerColor: 'hsl(326, 70%, 50%)',
-		kebab: 43,
-		kebabColor: 'hsl(110, 70%, 50%)',
-		donut: 83,
-		donutColor: 'hsl(9, 70%, 50%)'
+		state: 'NY',
+		shirt: 133,
+		shirtColor: 'hsl(257, 70%, 50%)',
+		pants: 52,
+		pantsColor: 'hsl(326, 70%, 50%)',
+		dress: 43,
+		dressColor: 'hsl(110, 70%, 50%)',
+		shoes: 83,
+		shoesColor: 'hsl(9, 70%, 50%)'
 	},
 	{
-		country: 'AI',
-		'hot dog': 81,
-		'hot dogColor': 'hsl(190, 70%, 50%)',
-		burger: 80,
-		burgerColor: 'hsl(325, 70%, 50%)',
-		kebab: 112,
-		kebabColor: 'hsl(54, 70%, 50%)',
-		donut: 35,
-		donutColor: 'hsl(285, 70%, 50%)'
+		state: 'PA',
+		shirt: 81,
+		shirtColor: 'hsl(190, 70%, 50%)',
+		pants: 80,
+		pantsColor: 'hsl(325, 70%, 50%)',
+		dress: 112,
+		dressColor: 'hsl(54, 70%, 50%)',
+		shoes: 35,
+		shoesColor: 'hsl(285, 70%, 50%)'
 	},
 	{
-		country: 'AL',
-		'hot dog': 66,
-		'hot dogColor': 'hsl(208, 70%, 50%)',
-		burger: 111,
-		burgerColor: 'hsl(334, 70%, 50%)',
-		kebab: 167,
-		kebabColor: 'hsl(182, 70%, 50%)',
-		donut: 18,
-		donutColor: 'hsl(76, 70%, 50%)'
+		state: 'TX',
+		shirt: 66,
+		shirtColor: 'hsl(208, 70%, 50%)',
+		pants: 111,
+		pantsColor: 'hsl(334, 70%, 50%)',
+		dress: 167,
+		dressColor: 'hsl(182, 70%, 50%)',
+		shoes: 18,
+		shoesColor: 'hsl(76, 70%, 50%)'
 	},
 	{
-		country: 'AM',
-		'hot dog': 80,
-		'hot dogColor': 'hsl(87, 70%, 50%)',
-		burger: 47,
-		burgerColor: 'hsl(141, 70%, 50%)',
-		kebab: 158,
-		kebabColor: 'hsl(224, 70%, 50%)',
-		donut: 49,
-		donutColor: 'hsl(274, 70%, 50%)'
+		state: 'AM',
+		shirt: 80,
+		shirtColor: 'hsl(87, 70%, 50%)',
+		pants: 47,
+		pantsColor: 'hsl(141, 70%, 50%)',
+		dress: 158,
+		dressColor: 'hsl(224, 70%, 50%)',
+		shoes: 49,
+		shoesColor: 'hsl(274, 70%, 50%)'
 	}
 ];
 
