@@ -37,8 +37,7 @@ function Sidebar() {
 			defaultCollapsed
 			backgroundColor={colors.primary[400]}
 			rootStyles={{
-				margin: '1rem',
-				borderRadius: '5px'
+				margin: '15px 0 15px 15px'
 			}}
 		>
 			<Menu

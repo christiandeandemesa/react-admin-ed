@@ -136,6 +136,12 @@ const themeSettings = mode => {
 						secondary: {
 							main: colors.greenAccent[500]
 						},
+						info: {
+							main: colors.blueAccent[600]
+						},
+						error: {
+							main: colors.redAccent[600]
+						},
 						neutral: {
 							dark: colors.grey[700],
 							main: colors.grey[500],
