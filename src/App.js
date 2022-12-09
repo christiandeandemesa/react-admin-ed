@@ -13,8 +13,8 @@ import Form from './pages/Form';
 import Calendar from './pages/Calendar';
 import FAQ from './pages/FAQ';
 import Bar from './pages/Bar';
-import Line from './pages/Line';
 import Pie from './pages/Pie';
+import Line from './pages/Line';
 import Geography from './pages/Geography';
 
 import {ColorModeContext, useMode} from './theme';

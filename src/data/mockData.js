@@ -194,7 +194,6 @@ export const mockDataOrders = [
 ];
 
 // Fake products' bar data
-// CA FL IL NY PA TX
 export const mockBarData = [
 	{
 		state: 'CA',
@@ -275,36 +274,43 @@ export const mockBarData = [
 	}
 ];
 
+// Fake products' pie data
 export const mockPieData = [
 	{
-		id: 'hack',
-		label: 'hack',
+		id: 'shirt',
+		label: 'shirt',
 		value: 239,
 		color: 'hsl(104, 70%, 50%)'
 	},
 	{
-		id: 'make',
-		label: 'make',
+		id: 'pants',
+		label: 'pants',
 		value: 170,
 		color: 'hsl(162, 70%, 50%)'
 	},
 	{
-		id: 'go',
-		label: 'go',
+		id: 'dress',
+		label: 'dress',
 		value: 322,
 		color: 'hsl(291, 70%, 50%)'
 	},
 	{
-		id: 'lisp',
-		label: 'lisp',
+		id: 'shoes',
+		label: 'shoes',
 		value: 503,
 		color: 'hsl(229, 70%, 50%)'
 	},
 	{
-		id: 'scala',
-		label: 'scala',
+		id: 'jacket',
+		label: 'jacket',
 		value: 584,
 		color: 'hsl(344, 70%, 50%)'
+	},
+	{
+		id: 'hat',
+		label: 'hat',
+		value: 99,
+		color: 'hsl(72, 70%, 50%)'
 	}
 ];
 

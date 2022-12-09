@@ -55,6 +55,7 @@ function Form() {
 	// Fake form submission function.
 	const handleFormSubmit = values => {
 		const isAdminBoolean = values.isAdmin === 'true'; // bug When form is submitted, the boolean becomes a string.
+		// eslint-disable-next-line no-console
 		console.log(values, isAdminBoolean);
 	};
 
