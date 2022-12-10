@@ -1,8 +1,25 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
+import {useTheme, Box} from '@mui/material';
+
+import Header from '../components/Header';
+import GeographyChart from '../components/GeographyChart';
+
+import {tokens} from '../theme';
 
 function Geography() {
-	return <div>Geography</div>;
+	const theme = useTheme();
+	const colors = tokens(theme.palette.mode);
+
+	return (
+		<Box sx={{m: '20px'}}>
+			<Header title='GEOGRAPHY CHART' subtitle='Total Product Sales Across the World' />
+
+			<Box
+				sx={{height: '75vh', border: `1px solid ${colors.grey[100]}`, borderRadius: '4px'}}
+			>
+				<GeographyChart />
+			</Box>
+		</Box>
+	);
 }
 
 export default Geography;
