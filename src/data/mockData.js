@@ -1,6 +1,6 @@
 import {tokens} from '../theme';
 
-// Fake user documents from MongoDB
+// Fake user documents from MongoDB.
 export const mockDataUsers = [
 	{
 		id: 1,
@@ -46,7 +46,7 @@ export const mockDataUsers = [
 	}
 ];
 
-// Fake product documents from MongoDB
+// Fake product documents from MongoDB.
 export const mockDataProducts = [
 	{
 		id: 1,
@@ -149,7 +149,7 @@ export const mockDataProducts = [
 	}
 ];
 
-// Fake order documents from MongoDB
+// Fake order documents from MongoDB.
 export const mockDataOrders = [
 	{
 		id: 1,
@@ -193,7 +193,7 @@ export const mockDataOrders = [
 	}
 ];
 
-// Fake products' bar data
+// Fake products' bar data.
 export const mockBarData = [
 	{
 		state: 'CA',
@@ -274,7 +274,7 @@ export const mockBarData = [
 	}
 ];
 
-// Fake products' pie data
+// Fake products' pie data.
 export const mockPieData = [
 	{
 		id: 'shirt',
@@ -314,165 +314,166 @@ export const mockPieData = [
 	}
 ];
 
+// Fake products' line data.
 export const mockLineData = [
 	{
-		id: 'japan',
+		id: 'pants',
 		color: tokens('dark').greenAccent[500],
 		data: [
 			{
-				x: 'plane',
+				x: 'Jan',
 				y: 101
 			},
 			{
-				x: 'helicopter',
+				x: 'Feb',
 				y: 75
 			},
 			{
-				x: 'boat',
+				x: 'Mar',
 				y: 36
 			},
 			{
-				x: 'train',
+				x: 'Apr',
 				y: 216
 			},
 			{
-				x: 'subway',
+				x: 'May',
 				y: 35
 			},
 			{
-				x: 'bus',
+				x: 'Jun',
 				y: 236
 			},
 			{
-				x: 'car',
+				x: 'Jul',
 				y: 88
 			},
 			{
-				x: 'moto',
+				x: 'Aug',
 				y: 232
 			},
 			{
-				x: 'bicycle',
+				x: 'Sep',
 				y: 281
 			},
 			{
-				x: 'horse',
+				x: 'Oct',
 				y: 1
 			},
 			{
-				x: 'skateboard',
+				x: 'Nov',
 				y: 35
 			},
 			{
-				x: 'others',
+				x: 'Dec',
 				y: 14
 			}
 		]
 	},
 	{
-		id: 'france',
+		id: 'shirt',
 		color: tokens('dark').blueAccent[300],
 		data: [
 			{
-				x: 'plane',
+				x: 'Jan',
 				y: 212
 			},
 			{
-				x: 'helicopter',
+				x: 'Feb',
 				y: 190
 			},
 			{
-				x: 'boat',
+				x: 'Mar',
 				y: 270
 			},
 			{
-				x: 'train',
+				x: 'Apr',
 				y: 9
 			},
 			{
-				x: 'subway',
+				x: 'May',
 				y: 75
 			},
 			{
-				x: 'bus',
+				x: 'Jun',
 				y: 175
 			},
 			{
-				x: 'car',
+				x: 'Jul',
 				y: 33
 			},
 			{
-				x: 'moto',
+				x: 'Aug',
 				y: 189
 			},
 			{
-				x: 'bicycle',
+				x: 'Sep',
 				y: 97
 			},
 			{
-				x: 'horse',
+				x: 'Oct',
 				y: 87
 			},
 			{
-				x: 'skateboard',
+				x: 'Nov',
 				y: 299
 			},
 			{
-				x: 'others',
+				x: 'Dec',
 				y: 251
 			}
 		]
 	},
 	{
-		id: 'us',
+		id: 'dress',
 		color: tokens('dark').redAccent[200],
 		data: [
 			{
-				x: 'plane',
+				x: 'Jan',
 				y: 191
 			},
 			{
-				x: 'helicopter',
+				x: 'Feb',
 				y: 136
 			},
 			{
-				x: 'boat',
+				x: 'Mar',
 				y: 91
 			},
 			{
-				x: 'train',
+				x: 'Apr',
 				y: 190
 			},
 			{
-				x: 'subway',
+				x: 'May',
 				y: 211
 			},
 			{
-				x: 'bus',
+				x: 'Jun',
 				y: 152
 			},
 			{
-				x: 'car',
+				x: 'Jul',
 				y: 189
 			},
 			{
-				x: 'moto',
+				x: 'Aug',
 				y: 152
 			},
 			{
-				x: 'bicycle',
+				x: 'Sep',
 				y: 8
 			},
 			{
-				x: 'horse',
+				x: 'Oct',
 				y: 197
 			},
 			{
-				x: 'skateboard',
+				x: 'Nov',
 				y: 107
 			},
 			{
-				x: 'others',
+				x: 'Dec',
 				y: 170
 			}
 		]
